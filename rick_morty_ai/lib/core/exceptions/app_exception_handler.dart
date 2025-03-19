@@ -1,8 +1,10 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
+import 'package:injectable/injectable.dart';
 import 'package:rick_morty_ai/core/exceptions/app_exceptions.dart';
 
+@Injectable()
 class AppExceptionHandler {
   AppException handle(Object exception) {
     if (exception is! Exception) return const DefaultException();

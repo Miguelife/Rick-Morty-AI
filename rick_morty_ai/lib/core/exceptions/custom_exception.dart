@@ -6,7 +6,7 @@ abstract interface class CustomException implements Exception {
 
   const CustomException({required this.title, required this.message});
 
-  static CustomException handle(Object exception) {
+  static CustomException from(Object exception) {
     if (exception is AppException) {
       return exception;
     }
